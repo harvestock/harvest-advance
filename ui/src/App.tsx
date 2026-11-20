@@ -37,8 +37,8 @@ function num(value: string): number {
 }
 
 export default function App() {
-  const [adminUrl, setAdminUrl] = useState('ws://127.0.0.1:34817')
-  const [appUrl, setAppUrl] = useState('ws://127.0.0.1:9000')
+  const [adminUrl, setAdminUrl] = useState('ws://127.0.0.1:38217')
+  const [appUrl, setAppUrl] = useState('ws://127.0.0.1:39217')
   const [appId, setAppId] = useState('harvest-advance')
   const [connection, setConnection] = useState<Connection | null>(null)
   const [status, setStatus] = useState('disconnected')
