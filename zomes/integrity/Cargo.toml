@@ -1,0 +1,18 @@
+[package]
+name = "harvest_advance_integrity"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Integrity zome for Harvest Advance"
+
+[lib]
+name = "harvest_advance_integrity"
+crate-type = ["cdylib", "rlib"]
+path = "src/lib.rs"
+
+[dependencies]
+hdi = "=0.8.0"
+holochain_serialized_bytes = "=0.0.57"
+serde = { version = "1", features = ["derive"] }
+holo_hash = "=0.7.1"
+harvest-advance-logic = { path = "../../crates/logic" }

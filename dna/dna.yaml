@@ -1,0 +1,14 @@
+manifest_version: "0"
+name: harvest-advance
+integrity:
+  network_seed: ~
+  properties: ~
+  zomes:
+    - name: harvest_advance_integrity
+      path: ../target/wasm32-unknown-unknown/release/harvest_advance_integrity.wasm
+coordinator:
+  zomes:
+    - name: harvest_advance
+      path: ../target/wasm32-unknown-unknown/release/harvest_advance.wasm
+      dependencies:
+        - name: harvest_advance_integrity
