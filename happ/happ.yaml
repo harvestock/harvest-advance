@@ -1,0 +1,15 @@
+manifest_version: "0"
+name: harvest-advance
+description: Harvest Advance hApp (campaigns, pledges, batches, projections)
+roles:
+  - name: harvest_advance
+    provisioning:
+      strategy: create
+      deferred: false
+    dna:
+      path: ../dna/harvest-advance.dna
+      modifiers:
+        network_seed: ~
+        properties: ~
+      installed_hash: ~
+      clone_limit: 0

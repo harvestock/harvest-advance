@@ -1,0 +1,11 @@
+{
+  "name": "harvest-advance-conductor-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node smoke.mjs"
+  },
+  "dependencies": {
+    "@holochain/client": "^0.20.8"
+  }
+}

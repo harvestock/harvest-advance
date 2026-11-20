@@ -1,0 +1,14 @@
+# getrandom 0.3 (pulled in by hdi for wasm32) refuses to compile for
+# wasm32-unknown-unknown unless a backend is selected. Holochain zomes never call
+# getrandom directly — randomness comes from the host via `random_bytes` — so the
+# "unsupported" backend is linked in and simply returns an error if ever called.
+#
+# `--allow-undefined` lets rust-lld keep the Holochain host-function externs as
+# wasm imports instead of failing the link.
+[target.wasm32-unknown-unknown]
+rustflags = [
+    '--cfg',
+    'getrandom_backend="unsupported"',
+    '-C',
+    'link-arg=--allow-undefined',
+]
