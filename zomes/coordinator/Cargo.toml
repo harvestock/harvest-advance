@@ -1,0 +1,19 @@
+[package]
+name = "harvest_advance"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Coordinator zome for Harvest Advance"
+
+[lib]
+name = "harvest_advance"
+crate-type = ["cdylib", "rlib"]
+path = "src/lib.rs"
+
+[dependencies]
+hdk = "=0.7.0"
+holochain_serialized_bytes = "=0.0.57"
+serde = { version = "1", features = ["derive"] }
+holo_hash = "=0.7.1"
+harvest_advance_integrity = { path = "../integrity" }
+harvest-advance-logic = { path = "../../crates/logic" }

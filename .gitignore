@@ -1,0 +1,10 @@
+target/
+node_modules/
+dist/
+.hc/
+*.happ
+*.dna
+.DS_Store
+
+# TypeScript incremental build info
+*.tsbuildinfo
